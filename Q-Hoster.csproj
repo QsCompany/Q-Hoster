@@ -1,0 +1,1191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E580887-2BE4-4C31-9521-99097938768B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QServer</RootNamespace>
+    <AssemblyName>QServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>F:\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <PublisherName>QShop</PublisherName>
+    <SuiteName>QShop</SuiteName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.10</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>H:\Setup</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Final1\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>queue</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App\Resources\ECommerce.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Server.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Publish|AnyCPU'">
+    <OutputPath>bin\Publish\</OutputPath>
+    <Optimize>true</Optimize>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>send</ErrorReport>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <FileAlignment>1024</FileAlignment>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>libs\Imports\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Imports\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Imports\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Imports\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Imports\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Imports\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlXml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Printing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\Services\Explorer.cs" />
+    <Compile Include="App\Models\IClient.cs" />
+    <Compile Include="App\Models\ILogin.cs" />
+    <Compile Include="App\Resources\Reporting\Logics\DowngradRDLCReport.cs" />
+    <Compile Include="App\Services\Resource.cs" />
+    <Compile Include="App\Services\statistics.cs" />
+    <Compile Include="App\Views\ClientEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Views\ClientEdit.Designer.cs">
+      <DependentUpon>ClientEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\ConnectionManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Views\ConnectionManager.Designer.cs">
+      <DependentUpon>ConnectionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\AuthenticationManager.cs" />
+    <Compile Include="Core\TaskQuee.cs" />
+    <Compile Include="Core\Crypto\UTF8.cs" />
+    <Compile Include="Core\WindowsService.cs" />
+    <Compile Include="Core\Crypto\Math.cs" />
+    <Compile Include="Core\Crypto\RSA.cs" />
+    <Compile Include="App\Data\Command\Model.cs" />
+    <Compile Include="App\Data\Command\Serializer.cs" />
+    <Compile Include="App\Data\Command\Services.cs" />
+    <Compile Include="App\Data\Facture\Help.cs" />
+    <Compile Include="App\Data\Facture\Seriaizer.cs" />
+    <Compile Include="App\Data\Mail\Serializer.cs" />
+    <Compile Include="App\Data\Mail\Service.cs" />
+    <Compile Include="App\Data\Mail\Model.cs" />
+    <Compile Include="App\Data\SFacture\Help.cs" />
+    <Compile Include="App\Data\SFacture\Serializer.cs" />
+    <Compile Include="App\Data\SFacture\Service.cs" />
+    <Compile Include="Core\Context.cs" />
+    <Compile Include="Core\DataRow.cs" />
+    <Compile Include="Core\DataRowTypeSerializer.cs" />
+    <Compile Include="Core\DataTable.cs" />
+    <Compile Include="Core\FingerPrint.cs" />
+    <Compile Include="Core\Firewall.cs" />
+    <Compile Include="Core\HosteableObjectAttribute.cs" />
+    <Compile Include="App\RegEx\Job.cs" />
+    <Compile Include="Core\List.cs" />
+    <Compile Include="Core\Printing.cs" />
+    <Compile Include="Core\ReadFromDevice.cs" />
+    <Compile Include="Core\Server.cs" />
+    <Compile Include="Core\Typeserializer.cs" />
+    <Compile Include="Core\User.cs" />
+    <Compile Include="App\RegEx\Validator.cs" />
+    <Compile Include="Core\Crypto\AesCbc.cs" />
+    <Compile Include="Core\DB\DatabaseUpdator.cs" />
+    <Compile Include="Core\DB\DBManager.cs" />
+    <Compile Include="Core\DB\MySqlManager.cs" />
+    <Compile Include="Core\DB\Path.cs" />
+    <Compile Include="Core\DB\SqlLiteManager.cs" />
+    <Compile Include="Core\DB\SqlManager.cs" />
+    <Compile Include="Core\DB\SQLStructures.cs" />
+    <Compile Include="App\WWW-X\GraberQLeman.cs" />
+    <Compile Include="App\Resources\libs\Loader.cs" />
+    <Compile Include="App\Views\Log.cs" />
+    <Compile Include="App\Views\Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\LoginEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Views\LoginEdit.Designer.cs">
+      <DependentUpon>LoginEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Crypto\AES.cs" />
+    <Compile Include="App\Models\AppSetting.cs" />
+    <Compile Include="Core\RquestHandler\LimitedResource.cs" />
+    <Compile Include="Core\Crypto\RsaCrypto.cs" />
+    <Compile Include="App\Models\Agent.cs" />
+    <Compile Include="App\Models\AppSettings.cs" />
+    <Compile Include="App\Models\Article.cs" />
+    <Compile Include="App\Models\BonType.cs" />
+    <Compile Include="App\Models\Category.cs" />
+    <Compile Include="App\Models\Client.cs" />
+    <Compile Include="Core\DB\Database.cs" />
+    <Compile Include="App\Models\EtatTransfer.cs" />
+    <Compile Include="App\Data\Facture\Model.cs" />
+    <Compile Include="App\Models\FactureBase.cs" />
+    <Compile Include="App\Models\History.cs" />
+    <Compile Include="App\Models\Loader.cs" />
+    <Compile Include="App\Models\Login.cs" />
+    <Compile Include="App\Models\Message.cs" />
+    <Compile Include="App\Models\Picture.cs" />
+    <Compile Include="App\Models\Price.cs" />
+    <Compile Include="App\Models\Product.cs" />
+    <Compile Include="App\Models\Project.cs" />
+    <Compile Include="App\Models\QData.cs" />
+    <Compile Include="App\Models\Rectangle.cs" />
+    <Compile Include="App\Models\Regociation.cs" />
+    <Compile Include="App\Data\SFacture\Model.cs" />
+    <Compile Include="App\Models\Signout.cs" />
+    <Compile Include="App\Models\SMS.cs" />
+    <Compile Include="App\Models\Tables\Agents.cs" />
+    <Compile Include="App\Models\Tables\Articles.cs" />
+    <Compile Include="App\Models\Tables\Categories.cs" />
+    <Compile Include="App\Models\Tables\Clients.cs" />
+    <Compile Include="App\Models\Tables\Costumers.cs" />
+    <Compile Include="App\Models\Tables\Factures.cs" />
+    <Compile Include="App\Models\Tables\Logins.cs" />
+    <Compile Include="App\Models\Tables\Persons.cs" />
+    <Compile Include="App\Models\Tables\Pictures.cs" />
+    <Compile Include="App\Models\Tables\Prices.cs" />
+    <Compile Include="App\Models\Tables\Products.cs" />
+    <Compile Include="App\Models\Tables\Signouts.cs" />
+    <Compile Include="App\Models\Tables\Versments.cs" />
+    <Compile Include="App\Models\Versment.cs" />
+    <Compile Include="App\Models\VersmentType.cs" />
+    <Compile Include="Core\Crypto\Certificate.cs" />
+    <Compile Include="Core\Parser\Dependency.cs" />
+    <Compile Include="Core\Parser\EIndexer.cs" />
+    <Compile Include="Core\Parser\Indexer.cs" />
+    <Compile Include="Core\Parser\Json.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Core\Parser\MyConsole.cs" />
+    <Compile Include="App\WWW-X\PrgTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App\Upgrader\QFactUpgrade.cs" />
+    <Compile Include="App\RegEx\Common.cs" />
+    <Compile Include="App\Resources\Reporting\Logics\Bon1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Resources\Reporting\Logics\Bon1.Designer.cs">
+      <DependentUpon>Bon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Resources\Reporting\Logics\ReportToPdf.cs" />
+    <Compile Include="App\Resources\Reporting\Logics\Tickets\IPrinteableTicket.cs" />
+    <Compile Include="App\Resources\Reporting\Logics\Tickets\PrintDocument.cs" />
+    <Compile Include="App\Resources\Reporting\Logics\Tickets\Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\RquestHandler\RequestArgs.cs" />
+    <Compile Include="Core\RquestHandler\Resource.cs" />
+    <Compile Include="Core\RquestHandler\Service.cs" />
+    <Compile Include="App\Views\SelectDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Views\SelectDatabase.Designer.cs">
+      <DependentUpon>SelectDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Serialization\AgentSerializer.cs" />
+    <Compile Include="App\Serialization\AgentsSerializer.cs" />
+    <Compile Include="App\Serialization\ArticleSerializer.cs" />
+    <Compile Include="App\Serialization\ArticlesSerializer.cs" />
+    <Compile Include="App\Serialization\CategoriesSerializer.cs" />
+    <Compile Include="App\Serialization\CategorySerializer.cs" />
+    <Compile Include="App\Serialization\ClientSerializer.cs" />
+    <Compile Include="App\Serialization\ClientsSerializer.cs" />
+    <Compile Include="App\Serialization\CostumersSerializer.cs" />
+    <Compile Include="App\Serialization\GuidSerializer.cs" />
+    <Compile Include="App\Serialization\JobSerializer.cs" />
+    <Compile Include="App\Serialization\ListSerializer.cs" />
+    <Compile Include="App\Serialization\LoginSerializer.cs" />
+    <Compile Include="App\Serialization\MessageSerializer.cs" />
+    <Compile Include="App\Serialization\Parameters\DataTableParameter.cs" />
+    <Compile Include="App\Serialization\Parameters\ISerializeParametre.cs" />
+    <Compile Include="App\Serialization\PersonSerializer.cs" />
+    <Compile Include="App\Serialization\PersonsSerializer.cs" />
+    <Compile Include="App\Serialization\PictureSerializer.cs" />
+    <Compile Include="App\Serialization\PicturesSerializer.cs" />
+    <Compile Include="App\Serialization\PriceSerializer.cs" />
+    <Compile Include="App\Serialization\ProductSerializer.cs" />
+    <Compile Include="App\Serialization\ProductsSerializer.cs" />
+    <Compile Include="App\Serialization\QDataSerializer.cs" />
+    <Compile Include="App\Serialization\SignoutSerializer.cs" />
+    <Compile Include="App\Serialization\SignupSerializer.cs" />
+    <Compile Include="App\Serialization\TicketSerializer.cs" />
+    <Compile Include="App\Serialization\VersmentSerializer.cs" />
+    <Compile Include="App\Serialization\VersmentsSerializer.cs" />
+    <Compile Include="App\Services\Agent.cs" />
+    <Compile Include="App\Services\Agents.cs" />
+    <Compile Include="App\Services\Article.cs" />
+    <Compile Include="App\Services\Articles.cs" />
+    <Compile Include="App\Services\Categories.cs" />
+    <Compile Include="App\Services\Category.cs" />
+    <Compile Include="App\Services\Client.cs" />
+    <Compile Include="App\Services\Clients.cs" />
+    <Compile Include="App\Services\CodeError.cs" />
+    <Compile Include="App\Services\Costumers.cs" />
+    <Compile Include="App\Data\Facture\Service.cs" />
+    <Compile Include="App\Services\CspxHandler.cs" />
+    <Compile Include="App\Services\GuidService.cs" />
+    <Compile Include="App\Services\Login.cs" />
+    <Compile Include="App\Services\Logout.cs" />
+    <Compile Include="App\Services\Person.cs" />
+    <Compile Include="App\Services\Persons.cs" />
+    <Compile Include="App\Services\Picture.cs" />
+    <Compile Include="App\Services\Pictures.cs" />
+    <Compile Include="App\Services\Price.cs" />
+    <Compile Include="App\Services\Prices.cs" />
+    <Compile Include="App\Services\PrintService.cs" />
+    <Compile Include="App\Services\Product.cs" />
+    <Compile Include="App\Services\Products.cs" />
+    <Compile Include="App\Services\Settings.cs" />
+    <Compile Include="App\Services\Signout.cs" />
+    <Compile Include="App\Services\Signup.cs" />
+    <Compile Include="App\Services\User.cs" />
+    <Compile Include="App\Services\Users.cs" />
+    <Compile Include="App\Services\Versment.cs" />
+    <Compile Include="App\Services\Versments.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings1.cs" />
+    <Compile Include="App\Resources\SqlServerTypes\Loader.cs" />
+    <Compile Include="App\statistics\Product.cs" />
+    <Compile Include="App\Upgrader\Trans.cs" />
+    <Compile Include="App\Upgrader\Converters.cs" />
+    <Compile Include="App\Upgrader\ObsoletAttribute.cs" />
+    <Compile Include="App\Upgrader\Products.cs" />
+    <Compile Include="App\Upgrader\Structures.cs" />
+    <Compile Include="App\Upgrader\UpgradeEasyLife.cs" />
+    <Compile Include="Core\Crypto\Zip\CloseExState.cs" />
+    <Compile Include="Core\Crypto\Zip\DeflateWrapperStream.cs" />
+    <Compile Include="Core\Crypto\Zip\GZipWrapperStream.cs" />
+    <Compile Include="Core\Crypto\Zip\ICloseEx.cs" />
+    <Compile Include="Core\Crypto\Zip\IRequestLifetimeTracker.cs" />
+    <Compile Include="UrlDownloader.cs" />
+    <Content Include="Files\lib\qloader.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\ClearTabe\dom.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\ClearTabe\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\HeavyTable\dom.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\HeavyTable\normalize.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\HeavyTable\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\KlasikalLogin\index.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\KlasikalLogin\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\avatar1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\avatar2 %281%29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\avatar2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\avatar3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\avatar4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\avatar5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\avatar6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\img_avatar4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\css\w3.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Login\login.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\QSidebar\dom.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\QSidebar\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\QUI\dom.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\QUI\Reset.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\QUI\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\StrechyButton\dom.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\StrechyButton\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\UniqueForm\dom.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\UniqueForm\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\img\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-background-sync.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-background-sync.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-broadcast-cache-update.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-broadcast-cache-update.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cache-expiration.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cache-expiration.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cacheable-response.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cacheable-response.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-core.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-core.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-google-analytics.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-google-analytics.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-precaching.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-precaching.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-range-requests.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-range-requests.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-routing.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-routing.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-strategies.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-strategies.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-streams.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-streams.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-sw.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\sw.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\sw.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\worker.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\worker.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\aapp.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\app.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\bootstrap.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fontawesome-webfonte0a5.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\glyphicons-halflings-regular.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\hbar.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\main.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\site.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\templates\UITemplates.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\InfiniteJs.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="App\Views\ClientEdit.resx">
+      <DependentUpon>ClientEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Views\ConnectionManager.resx">
+      <DependentUpon>ConnectionManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Views\Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Views\LoginEdit.resx">
+      <DependentUpon>LoginEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\BonAchat\BAchat.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\BonVent\BonCommand.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\BonVent\BVent.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\BonVent\Bvent_A5.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\BonVent\EtatClient.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\BonVent\Facture.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\BonVent\Format2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\Command\F1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\2012\Products\F1.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\Logics\Bon1.resx">
+      <DependentUpon>Bon1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Resources\Reporting\Logics\Tickets\Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Views\SelectDatabase.resx">
+      <DependentUpon>SelectDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Core\Crypto\Primes.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\data\data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\css\icommon\codropsicons.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\css\icommon\icomoon.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\css\index.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\css\index.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\css\style.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\css\style.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\materialicons.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-700.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-700.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-700.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-700.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-regular.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-regular.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\assets\mobile\fonts\roboto-v18-latin-regular.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Files\lib\q\assets\Components\Canvas3D\style.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\ClearTabe\Style.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\HeavyTable\data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\HeavyTable\style.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\QSidebar\style.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\StrechyButton\gen .bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Data\Primes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-background-sync.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-background-sync.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-broadcast-cache-update.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-broadcast-cache-update.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cache-expiration.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cache-expiration.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cacheable-response.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-cacheable-response.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-core.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-core.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-google-analytics.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-google-analytics.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-precaching.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-precaching.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-range-requests.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-range-requests.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-routing.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-routing.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-strategies.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-strategies.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-streams.dev.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-streams.prod.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\modules\offlineMode\workbox-sw.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fabric\SegoeUI-WestEuropean\SegoeUI-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fabric\SegoeUI-WestEuropean\SegoeUI-Light.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fabric\SegoeUI-WestEuropean\segoeui-regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fabric\SegoeUI-WestEuropean\segoeui-regular.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fabric\SegoeUI-WestEuropean\SegoeUI-Semilight.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fabric\SegoeUI-WestEuropean\segoeui-semilight.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fontawesome-webfontd41d.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fontawesome-webfonte0a5.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fontawesome-webfonte0a5.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\fontawesome-webfonte0a5.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\glyphicons-halflings-regular.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\glyphicons-halflings-regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\glyphicons-halflings-regular.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\glyphicons-halflings-regular.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\ODelI1aHBYDBqgeIAH2zlAC5S7WFEeHRqL6ObGQGT8o.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\ODelI1aHBYDBqgeIAH2zlC2Q8seG17bfDXYR_jUsrzg.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\ODelI1aHBYDBqgeIAH2zlFjqPhnWKseBf12Mt9_m7kc.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\ODelI1aHBYDBqgeIAH2zlMgmx_L9kV4w6g8dYQOLFUI.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\ODelI1aHBYDBqgeIAH2zlMODs9238LZG2v64UiBIjng.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\ODelI1aHBYDBqgeIAH2zlNOAHFN6BivSraYkjhveRHY.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\ODelI1aHBYDBqgeIAH2zlNV_2ngZ8dMf8fLgjYEouxg.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS-bold.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS55F-webfont.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS55F-webfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS55F-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS75F-webfont.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS75F-webfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\PTS75F-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\segoeui-regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\segoeui-regular.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\segoeui-semibold.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\toadOcfmlt9b38dHJxOBGDovqjS_dXPZszO_XltPdNg.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\toadOcfmlt9b38dHJxOBGEo0As1BFRXtCDhS66znb_k.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\toadOcfmlt9b38dHJxOBGFxe-GPfKKFmiXaJ_Q0GFr8.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\toadOcfmlt9b38dHJxOBGH2tx1iQUBYLA4fTJZSoO3U.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\toadOcfmlt9b38dHJxOBGHvBSgOUtlSCpvi6_8Wv308.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\toadOcfmlt9b38dHJxOBGJaoTU19aO7Bfv-FLfOt5YM.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\fonts\toadOcfmlt9b38dHJxOBGO4f2SQTi4oYi3kh3bYmG2Y.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\style\Main.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Files\Manifest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="IslamWebUrls.json" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\models.Article.datasource" />
+    <None Include="Properties\DataSources\models.CArticle.datasource" />
+    <None Include="Properties\DataSources\models.CArticles.datasource" />
+    <None Include="Properties\DataSources\models.FakePrice.datasource" />
+    <None Include="Properties\DataSources\models.FakePrices.datasource" />
+    <None Include="Properties\DataSources\models.Fournisseur.datasource" />
+    <None Include="Properties\DataSources\models.Product.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\Resources\ECommerce.ico" />
+    <Content Include="App\Resources\favicon.ico" />
+    <Content Include="App\Resources\libs\Imports\Microsoft.ReportViewer.Common.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\Microsoft.ReportViewer.Design.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\Microsoft.ReportViewer.ProcessingObjectModel.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\Microsoft.ReportViewer.WebDesign.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\Microsoft.ReportViewer.WebForms.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\Microsoft.ReportViewer.WinForms.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\Microsoft.SqlServer.Types.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\net40\MySql.Data.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\Imports\net45\MySql.Data.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\SqlServerTypes\x64\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\SqlServerTypes\x64\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\SqlServerTypes\x86\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\libs\SqlServerTypes\x86\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\SqlServerTypes\readme.htm" />
+    <Content Include="App\Resources\SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\Resources\SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\Cards.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\Forms.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\images\avatar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\images\avatar2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\img\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\img\QDev.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-background-sync.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-background-sync.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-broadcast-cache-update.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-broadcast-cache-update.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-cache-expiration.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-cache-expiration.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-cacheable-response.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-cacheable-response.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-core.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-core.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-google-analytics.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-google-analytics.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-precaching.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-precaching.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-range-requests.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-range-requests.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-routing.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-routing.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-strategies.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-strategies.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-streams.dev.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-streams.prod.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\offlineMode\workbox-sw.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\libs\worker.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\bourbon\bourbon.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\done.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\glyphicons.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\index.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\index.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\roboto.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\style.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\css\uisearch.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\fonts\roboto-v18-latin-700.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\fonts\roboto-v18-latin-regular.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\mobile\templates\templates.mobile.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\templates\AdminTemplates.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\assets\templates\Templates.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\e-shop.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\EntryPoint.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\common\bg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\app.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Canvas3D\dom.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Canvas3D\Reset.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\lib\q\assets\Components\Canvas3D\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="App\Resources\Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="QServer.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Core\Help\" />
+    <Folder Include="Files\lib\q\assets\Components\ActionButton\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

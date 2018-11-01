@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QServer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\data\</Value>
+    </Setting>
+    <Setting Name="DPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">QShopDatabase</Value>
+    </Setting>
+    <Setting Name="Addresses" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://+:80/;https://+:443/</Value>
+    </Setting>
+    <Setting Name="EntryPoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">./index.html</Value>
+    </Setting>
+    <Setting Name="MySQLPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BuckupDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastTimeBackup" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2016-03-02</Value>
+    </Setting>
+    <Setting Name="ServerIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="UserID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">root</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">root</Value>
+    </Setting>
+    <Setting Name="Port" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    <Setting Name="SharedPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\SharedPath\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
